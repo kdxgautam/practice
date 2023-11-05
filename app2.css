@@ -1,0 +1,474 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+    scroll-behavior: smooth;
+}
+
+.nav{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px min(103px,5%);
+    box-shadow: 0 4px 4px rgba(0,0,0,.25);
+}
+
+.nav{
+    position: sticky;
+    background-color: rgb(254, 254, 254);
+    top: 0;
+    z-index: 10;
+}
+
+
+
+.nsutai_logo{
+    height: 45px;
+}
+
+.nav_logo{
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+
+}
+
+.nsutai_name{
+    font-size: 1.4em;
+    text-align: center;
+    padding-left: 20px;
+    color: rgb(43, 41, 41);
+    font-weight: 700;
+
+}
+
+ul{
+    list-style-type: none;
+    font-size: 1em;
+    font-weight:500;
+}
+
+
+
+.home_nav, .team_nav{
+    position: relative;
+    display: inline-block;
+    color: #333;
+    text-decoration: none;
+    overflow: hidden;
+}
+
+.home_nav::before, .team_nav::before{
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 0;
+    height: 2px;
+    background-color: #d91212;
+    transform: translateX(-50%);
+    transition: width 0.5s ease;
+}
+
+
+
+.home_nav:hover::before, .team_nav:hover::before{
+    width: 100%;
+}
+
+
+li{
+    display: inline-block;
+}
+
+.home{
+    margin-right: 25px;
+}
+
+
+.container{
+    padding-left: 10%;
+    padding-right: 10%;
+    padding-top: 61px;
+}
+
+.our_team{
+    font-size: 40px;
+    font-weight: 500;
+    line-height: 55px;
+}
+
+.text_section{
+    padding-top: 32px;
+    padding-bottom: 32px;
+    font-size: 20px;
+    font-weight: 300;
+    line-height: 26px;
+    text-align: left;
+}
+
+
+.button_group{
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 20px;
+    gap: 20px 0;
+    justify-content: space-between;
+}
+
+button{
+    background: #a41034;
+    border: 2px solid #a41034;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: all .2s ease;
+    color: #fff;
+    font-size: 19px;
+    font-weight: 400;
+    line-height: 24px;
+    width: calc(90% / 4);
+    height: 54px;
+    letter-spacing: 0;
+    text-align: left;
+    font-family: Montserrat;
+}
+
+button:hover{
+    background-color:white ;
+    border: 2px solid #a41034;
+    color:#a41034 ;
+
+}
+
+.all_button{
+    background-color: white;
+    border: 2px solid #a41034;
+    color:#a41034 ;
+}
+
+
+
+
+.team_panel{
+
+}
+
+.all_panel{
+    margin: 40px 0;
+}
+
+.text_core_members{
+    line-height: 49px;
+    font-size: 35px;
+    font-weight: 500;
+    text-align: left;
+    
+}
+
+.core_mem_card{
+    display: grid;
+    grid-template-columns: repeat(auto-fill,minmax(300px,1fr));
+    grid-gap: 30px;
+    gap: 30px;
+    margin-top: 20px;
+}
+
+
+.core_mask{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 0;
+    background-color: #a41035f5;
+    transition: all .2 ease;
+    pointer-events:none; 
+    opacity: 0;
+}
+
+.core1_box:hover .core_mask, .core2_box:hover .core_mask, .core3_box:hover .core_mask,.core4_box:hover .core_mask{
+    height: 100%;
+    opacity: 0.98;
+}
+
+
+
+.core_mask{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.core_mask p{
+    text-align: left;
+    font-size: 20px;
+    margin: 18px 0 0;
+    color: white;
+    font-weight: 300;
+    padding: 2em;
+    margin-bottom: 7.2rem;
+}
+
+.github_icon{
+    width: 50px;
+
+}
+
+.linkdin_icon{
+
+}
+
+.user_icon{
+
+}
+
+a{
+    text-decoration: none;
+}
+
+
+
+
+
+
+
+.core_members{
+    margin-bottom: 40px;
+}
+
+
+.core1, .core2, .core3 ,.core4{
+    height: 40vh;
+    border-radius: 50%;
+}
+
+
+.core1_box, .core2_box, .core3_box , .core4_box{
+    border: 1px solid #a41034;
+    display: flex;
+    align-items: center;
+    padding: 40px 0;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    flex-direction: column;
+    position: relative;
+    transition: all .3s ease;
+
+}
+
+
+.presi_name, .vice_name1, .vice_name2, .direc_name{
+    font-size: 25px;
+    font-weight: 500;
+    margin-top: 22px;
+}
+
+.presi_position, .vice_position , .direc_position{
+    font-size: 17px;
+    color: #a41034;
+}
+
+
+
+
+
+
+
+.text_advisory_board{
+    line-height: 49px;
+    font-size: 35px;
+    font-weight: 500;
+    text-align: left;
+}
+
+
+.adv{
+    border-radius: 50%;
+    height: 40vh;
+    width: 40vh;
+
+
+}
+
+.adv_mem_card{
+    display: grid;
+    grid-template-columns: repeat(auto-fill,minmax(300px,1fr));
+    grid-gap: 30px;
+    gap: 30px;
+    margin-top: 30px;
+}
+
+.adv1_box ,.adv2_box, .adv3_box, .adv4_box, .adv5_box{
+    border: 1px solid #a41034;
+    display: flex;
+    align-items: center;
+    padding: 40px 0;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    flex-direction: column;
+    position: relative;
+    transition: all .3s ease;
+}
+
+.adv_name{
+    font-size: 25px;
+    font-weight: 500;
+    margin-top: 22px;
+
+}
+
+.adv_position{
+    font-size: 17px;
+    color: #a41034;
+
+}
+
+
+
+.advi_mask{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 0;
+    background-color: #a41035f5;
+    transition: all .2 ease;;
+    pointer-events:none; 
+    opacity: 0;
+}
+
+.adv1_box:hover .advi_mask,.adv2_box:hover .advi_mask,.adv3_box:hover .advi_mask,.adv4_box:hover .advi_mask,.adv5_box:hover .advi_mask{
+    height: 100%;
+    opacity: 0.98;
+}
+
+
+
+.adv2_box .advi_handles{
+    margin-top: 35px;
+} 
+
+
+
+.advi_mask{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.advi_mask p{
+    text-align: left;
+    font-size: 20px;
+    margin: 18px 0 0;
+    color: white;
+    font-weight: 300;
+    padding: 2em;
+    margin-bottom: 7.2rem;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+footer{
+    background-color: #a41034;
+    height: 30vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 40px min(123px,5%);
+}
+
+.foot_quicklink{
+    color: white;
+    display: flex;
+    flex-direction: column;
+    gap: 23px;
+}
+
+.quick_flink{
+    font-size: 28px;
+    font-weight: 500;
+    line-height: 34px;
+    text-align: left;
+}
+
+.footer_link{
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    font-size: 20px;
+    
+
+}
+
+.home_flink{
+    text-decoration: none;
+    color: white;
+    font-weight: 300;
+}
+.team_flink{
+    text-decoration: none;
+    color: white;
+    font-weight: 300;
+}
+
+
+.icon{
+    display: flex;
+    flex-direction: column;
+    gap: 23px;
+}
+.insta_logo{
+    height: 35px;
+}
+
+.linkdin_logo{
+    height: 35px;
+}
+
+.followus{
+    font-size: 28px;
+    font-weight: 500;
+    color: white;
+}
+
+.nsut_foot{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 20px;
+}
+
+.foot_nsutai_logo{
+    height: 40px;
+}
+
+.nsutai_foot{
+    color: white;
+    font-size: 32px;
+}

@@ -1,0 +1,447 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.nav{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px min(103px,5%);
+    box-shadow: 0 4px 4px rgba(0,0,0,.25);
+}
+
+.nav{
+    position: sticky;
+    background-color: rgb(254, 254, 254);
+    top: 0;
+    z-index: 10;
+}
+
+
+.nsutai_logo{
+    height: 45px;
+}
+
+.nav_logo{
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+
+}
+
+a{
+    text-decoration: none;
+}
+
+.nsutai_name{
+    font-size: 1.4em;
+    text-align: center;
+    padding-left: 20px;
+    color: rgb(43, 41, 41);
+    font-weight: 700;
+
+}
+
+ul{
+    list-style-type: none;
+    font-size: 1em;
+    font-weight:500;
+}
+
+
+
+.home_nav, .team_nav{
+    position: relative;
+    display: inline-block;
+    color: #333;
+    text-decoration: none;
+    overflow: hidden;
+}
+
+.home_nav::before, .team_nav::before{
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 0;
+    height: 2px;
+    background-color: #d91212;
+    transform: translateX(-50%);
+    transition: width 0.5s ease;
+}
+
+
+
+.home_nav:hover::before, .team_nav:hover::before{
+    width: 100%;
+}
+
+
+li{
+    display: inline-block;
+}
+
+.home{
+    margin-right: 25px;
+}
+
+
+
+
+.intel_logo{
+    height: 17px;
+}
+
+.nsut_name{
+    font-size: 25px;
+
+}
+
+.ai_group{
+    font-size: 70px;
+    color:hsl(345, 82%, 55%);
+}
+
+.intel{
+    margin-top: 30px;
+}
+
+
+.animated_sec{
+    background: url(images/animatedphoto.jpg);
+    height: 100vh;
+    width: auto;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    letter-spacing: 0.15rem;
+}
+
+.about_sec{
+    height: auto;
+    padding-left: 10%;
+    padding-right: 10%;
+    padding-top: 60px;
+}
+.about_us{
+    font-size: 40px;
+    font-weight: 500;
+    text-align: left;
+    position: relative;
+    
+
+}
+
+.about_logo{
+    max-width: 180px;
+    min-width: 130px;
+    padding-bottom: 20px;
+}
+
+.about_para{
+    
+    font-weight: 300;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 50px;
+    text-align: left;
+    
+}
+
+.red_nsutai{
+    color: #a41034;
+}
+.text_nsutai{
+    line-height: 28px;
+    font-size: 20px;
+
+}
+
+
+
+
+article{
+    background-color: #d9d9d933;
+    padding-left: 10%;
+    padding-right: 10%;
+    padding-top: 60px;
+    height: auto;
+
+}
+
+.text_fproject{
+    font-size: 40px;
+    margin-bottom: 30px;
+}
+
+.research_article{
+    display: grid;
+    padding-bottom: 83px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 20px;
+    gap: 20px;
+    padding-top: 20px;
+    
+
+}
+
+
+.mask_effect{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 0;
+    background-color: #d91212;
+    opacity: 0.3;
+    transition:  0.3s;
+    pointer-events:none; 
+}
+
+
+
+
+.mask:hover .mask_effect, .book:hover .mask_effect , .hole:hover .mask_effect  {
+    height: 100%;
+}
+
+.link_arrow{
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    opacity: 0;
+}
+
+.mask:hover .link_arrow, .hole:hover .link_arrow, .book:hover .link_arrow{
+    opacity: 1;
+}
+
+.mask_link,.hole_link, .book_link{
+    text-decoration: none;
+    color: black;
+}
+
+
+.mask,.book, .hole{
+    width: 346px;
+    position: relative;
+}
+
+.mask_img{
+    height: 233px;
+
+}
+
+.mask_text{
+    padding: 30px 32px;
+    background-color: #fff;
+    border: 1px solid #a41034;
+    width: 100%;
+}
+
+.mask_heading{
+    font-size: 30px;
+    font-weight: 500;
+    line-height: 37px;
+    letter-spacing: 0;
+    text-align: left;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    min-height: 111px;
+    max-height: 111px;
+    transition: all 1s;
+}
+
+.mask_infotext{
+    width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 9;
+    -webkit-box-orient: vertical;
+    min-height: 172.8px;
+    max-height: 172.8px;
+    transition: all 1s;
+}
+
+.hole{
+    width: 346px;
+
+}
+.hole_img{
+    height: 233px;
+
+}
+
+.hole_text{
+    padding: 30px 32px;
+    background-color: #fff;
+    border: 1px solid #a41034;
+    width: 100%;
+}
+
+.hole_heading{
+    font-size: 30px;
+    font-weight: 500;
+    line-height: 37px;
+    letter-spacing: 0;
+    text-align: left;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    min-height: 111px;
+    max-height: 111px;
+    transition: all 1s;
+
+}
+
+.hole_infotext{
+    width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 9;
+    -webkit-box-orient: vertical;
+    min-height: 172.8px;
+    max-height: 172.8px;
+    transition: all 1s;
+}
+
+
+.book{
+    width: 346px;
+
+}
+
+.book_img{
+    height: 233px;
+
+}
+
+.book_text{
+    padding: 30px 32px;
+    background-color: #fff;
+    border: 1px solid #a41034;
+    width: 100%;
+}
+
+.book_heading{
+    font-size: 30px;
+    font-weight: 500;
+    line-height: 37px;
+    letter-spacing: 0;
+    text-align: left;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    min-height: 111px;
+    max-height: 111px;
+    transition: all 1s;
+
+}
+
+.book_infotext{
+    width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 9;
+    -webkit-box-orient: vertical;
+    min-height: 172.8px;
+    max-height: 172.8px;
+    transition: all 1s;
+}
+
+footer{
+    background-color: #a41034;
+    height: 30vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 40px min(123px,5%);
+}
+
+.foot_quicklink{
+    color: white;
+    display: flex;
+    flex-direction: column;
+    gap: 23px;
+}
+
+.quick_flink{
+    font-size: 28px;
+    font-weight: 500;
+    line-height: 34px;
+    text-align: left;
+}
+
+.footer_link{
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    font-size: 20px;
+    
+
+}
+
+.home_flink{
+    text-decoration: none;
+    color: white;
+    font-weight: 300;
+}
+.team_flink{
+    text-decoration: none;
+    color: white;
+    font-weight: 300;
+}
+
+
+.icon{
+    display: flex;
+    flex-direction: column;
+    gap: 23px;
+}
+.insta_logo{
+    height: 35px;
+}
+
+.linkdin_logo{
+    height: 35px;
+}
+
+.followus{
+    font-size: 28px;
+    font-weight: 500;
+    color: white;
+}
+
+.nsut_foot{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 20px;
+}
+
+.foot_nsutai_logo{
+    height: 40px;
+}
+
+.nsutai_foot{
+    color: white;
+    font-size: 32px;
+}
